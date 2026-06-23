@@ -7,9 +7,9 @@
  */
 
 export const profile = {
-  name: "Anthony Di Ferdinando",
+  name: "Anthony DiFerdinando",
   firstName: "Anthony",
-  lastName: "Di Ferdinando",
+  lastName: "DiFerdinando",
   role: "Mechanical Engineer",
   // Newport Beach, CA — used as a datum callout in the hero.
   location: "Newport Beach, CA",
@@ -24,7 +24,7 @@ export const profile = {
   disciplines: ["Mechanical Analysis", "Full-Cycle Project Management", "Systems Engineering"],
   // Lead paragraph (recruiter-facing, condensed from the resume summary).
   summary:
-    "Mechanical engineer who takes complex electromechanical hardware from concept through production — avionics displays, hydraulic systems, and military-grade electronics. I write test procedures, troubleshoot hardware, and validate systems alongside electrical and manufacturing teams to ship reliable hardware for demanding operational environments.",
+    "Mechanical engineer who takes complex electromechanical hardware from concept through production, spanning avionics displays, hydraulic systems, and military-grade electronics. I write test procedures, troubleshoot hardware, and validate systems alongside electrical and manufacturing teams to ship reliable hardware for demanding operational environments.",
   focus: ["Avionics displays", "Hydraulic systems", "Military-grade electronics"],
 } as const
 
@@ -57,7 +57,7 @@ export const experience: Experience[] = [
     bullets: [
       "Redesigned the Apache Enhanced Up Front Display: 720p → 1080p resolution, upgraded video processing, and a 20% system cost reduction.",
       "Developed an in-house 3-axis vibration test procedure and fixture for Apache MPD displays, enabling internal qualification and cutting external testing lead time and cost.",
-      "Integrate avionics subsystems with electrical engineers — wire-harness design, PCB/IC component specification, and mechanical packaging of electrical hardware.",
+      "Integrate avionics subsystems with electrical engineers: wire-harness design, PCB/IC component specification, and mechanical packaging of electrical hardware.",
       "Manage multiple hardware projects across the full production cycle while supporting machinists and technicians.",
     ],
   },
@@ -69,7 +69,7 @@ export const experience: Experience[] = [
     end: "Mar 2025",
     summary: "Machine shop and cleanroom production of medical and military-grade electronics.",
     bullets: [
-      "Manufactured and tested military-grade hardware in a controlled cleanroom — eutectic soldering, wire bonding, board integration, and quality inspection.",
+      "Manufactured and tested military-grade hardware in a controlled cleanroom: eutectic soldering, wire bonding, board integration, and quality inspection.",
       "Ran visual and X-ray inspection to verify hardware quality and product conformance.",
       "Reprogrammed silicon wafer-saw parameters to raise yield from 9 to 24 chips per wafer.",
     ],
@@ -82,7 +82,7 @@ export const experience: Experience[] = [
     end: "Apr 2024",
     summary: "Integration, testing, and troubleshooting of fluid-power and electromechanical systems.",
     bullets: [
-      "Redesigned a 90 gpm winch system for manufacturability — lower cost and a 30% increase in annual production.",
+      "Redesigned a 90 gpm winch system for manufacturability, with lower cost and a 30% increase in annual production.",
       "Developed an 80 gpm system for a plywood press with four independent cylinder circuits that unload, press, and lift sheets.",
       "Inspected, documented, and troubleshot the Water World attraction at Universal Studios alongside a senior engineer.",
     ],
@@ -114,7 +114,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "Speed-Matching Treadmill",
-    org: "ASU — Mechanical System Design",
+    org: "ASU · Mechanical System Design",
     period: "2019–2023",
     blurb:
       "A smart treadmill that senses the runner's position and matches belt speed to keep them centered. Lidar sensing feeds a MATLAB/Simulink ESC that sorts the user into five speed zones, driving a 2 hp, 25,000 rpm motor through a custom drivetrain for a seamless outdoor-run feel.",
@@ -122,7 +122,7 @@ export const projects: Project[] = [
   },
   {
     title: "FEA for Car Attachments",
-    org: "ASU — Structural Analysis",
+    org: "ASU · Structural Analysis",
     period: "2019–2023",
     blurb:
       "Structural analysis of automotive components: simulation models for stress, deformation, displacement, Von Mises, and reaction forces, documented in a formal report. Parts were engineered in SOLIDWORKS and AutoCAD Inventor to refine designs and select materials.",

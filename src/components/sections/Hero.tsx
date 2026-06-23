@@ -43,7 +43,7 @@ export function Hero() {
           <h1 className="font-display text-6xl font-bold leading-[0.92] tracking-tight text-ink expanded sm:text-7xl">
             Anthony
             <br />
-            Di Ferdinando
+            DiFerdinando
           </h1>
 
           <Dimension label={profile.geo} />
@@ -77,27 +77,20 @@ export function Hero() {
 
         {/* Right — headshot slot + title block */}
         <div className="flex flex-col gap-4 motion-safe:[animation:fade-up_0.6s_0.1s_ease_both]">
-          <div className="relative flex aspect-[4/5] flex-col items-center justify-center gap-3 border border-graphite-300 bg-paper-raised p-6 text-center">
-            <span className="absolute left-3 top-2.5 font-mono text-[10px] tracking-[0.06em] text-graphite-400">
+          <div className="relative aspect-[4/5] overflow-hidden border border-graphite-300 bg-paper-raised">
+            <img
+              src="/anthony.jpeg"
+              alt="Anthony DiFerdinando"
+              className="h-full w-full object-cover"
+            />
+            <span className="absolute left-2.5 top-2.5 bg-ink/55 px-1.5 py-0.5 font-mono text-[10px] tracking-[0.06em] text-paper">
               FIG. 01
-            </span>
-            <span className="flex h-12 w-12 items-center justify-center rounded-full border border-graphite-300 text-graphite-400">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <circle cx="12" cy="8" r="4" />
-                <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7" />
-              </svg>
-            </span>
-            <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-graphite-500">
-              Headshot
-            </span>
-            <span className="max-w-[180px] text-[12px] text-graphite-400">
-              Professional photo to be added
             </span>
           </div>
 
           <TitleBlock
             rows={[
-              { label: "Drawn", value: "A. Di Ferdinando" },
+              { label: "Drawn", value: "A. DiFerdinando" },
               { label: "Disc", value: "Mechanical / Systems" },
               { label: "Loc", value: profile.location },
               { label: "Rev", value: profile.rev },

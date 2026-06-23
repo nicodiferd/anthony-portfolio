@@ -39,7 +39,7 @@ export function Contact() {
 
         <div className="mt-16 flex flex-wrap items-center justify-between gap-4 border-t border-paper/15 pt-6">
           <div className="font-mono text-[12px] tracking-[0.04em] text-paper/50">
-            ANTHONY DI FERDINANDO / 2026
+            ANTHONY DIFERDINANDO / 2026
           </div>
           <div className="text-[13px] text-paper/40">{profile.location}</div>
         </div>

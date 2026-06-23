@@ -10,11 +10,9 @@ export function SiteHeader() {
       <Container className="flex h-14 items-center justify-between">
         <a
           href="#top"
-          className="flex items-center gap-2 font-mono text-[13px] font-bold tracking-wide text-ink no-underline"
+          className="font-mono text-[13px] font-bold tracking-wide text-ink no-underline"
         >
-          <span>A. DI FERDINANDO</span>
-          <span className="text-blueprint-500">/</span>
-          <span className="font-normal text-graphite-500">M.E.</span>
+          Anthony
         </a>
         <nav className="hidden items-center gap-7 md:flex">
           {navLinks.map((s) => (

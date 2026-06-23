@@ -13,7 +13,7 @@ export function Profile() {
           </p>
           <p className="mt-6 max-w-[640px] text-[16px] leading-relaxed text-graphite-600">
             I collaborate across mechanical, electrical, and manufacturing teams to
-            deliver reliable hardware for the field — from avionics displays to
+            deliver reliable hardware for the field, from avionics displays to
             fluid-power systems and cleanroom electronics, covering everything from
             translating requirements into designs to validating finished hardware.
           </p>

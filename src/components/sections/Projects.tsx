@@ -54,7 +54,7 @@ export function Projects() {
             </span>
             <span className="text-[15px] font-semibold text-ink">More projects coming</span>
             <span className="max-w-[220px] text-[13px] text-graphite-400">
-              Space reserved for additional work — send details and media to fill in.
+              Space reserved for additional work. Send details and media to fill in.
             </span>
           </article>
         </div>
