@@ -26,7 +26,7 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 blueprint-grid opacity-60" />
       <Container className="relative grid items-end gap-12 pt-14 pb-12 lg:grid-cols-[1.5fr_1fr] lg:gap-14">
         {/* Left — identity */}
-        <div className="motion-safe:[animation:fade-up_0.6s_ease_both]">
+        <div className="min-w-0 motion-safe:[animation:fade-up_0.6s_ease_both]">
           <div className="mb-5 flex flex-wrap items-center gap-x-4 gap-y-2">
             <span className="font-mono text-[12px] uppercase tracking-[0.14em] text-blueprint-500">
               Mechanical Engineer / Systems
@@ -40,7 +40,7 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="font-display text-6xl font-bold leading-[0.92] tracking-tight text-ink expanded sm:text-7xl">
+          <h1 className="font-display text-[clamp(2.25rem,11.5vw,4rem)] font-bold leading-[0.92] tracking-tight text-ink expanded-sm break-words sm:expanded xl:text-[4.5rem] 2xl:text-[4.75rem]">
             Anthony
             <br />
             DiFerdinando
@@ -76,7 +76,7 @@ export function Hero() {
         </div>
 
         {/* Right — headshot slot + title block */}
-        <div className="flex flex-col gap-4 motion-safe:[animation:fade-up_0.6s_0.1s_ease_both]">
+        <div className="flex min-w-0 flex-col gap-4 motion-safe:[animation:fade-up_0.6s_0.1s_ease_both]">
           <div className="relative aspect-[4/5] overflow-hidden border border-graphite-300 bg-paper-raised">
             <img
               src="/anthony.jpeg"
