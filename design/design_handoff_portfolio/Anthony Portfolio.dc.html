@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,18..72,400;0,18..72,500;1,18..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; }
+  ::selection { background: rgba(192,69,31,0.18); }
+</style>
+</helmet>
+
+<div style="--accent: {{ accent }}; background: #f4f2ec; color: #1b1d22; font-family: 'Archivo', system-ui, sans-serif; min-height: 100vh; -webkit-font-smoothing: antialiased;">
+
+  <!-- ============ NAV ============ -->
+  <header style="position: sticky; top: 0; z-index: 50; background: #f4f2ec; border-bottom: 1px solid rgba(20,22,26,0.14);">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 16px 44px; display: flex; align-items: center; justify-content: space-between;">
+      <a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1b1d22;">
+        <span style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 0.02em; font-weight: 700;">DI FERDINANDO</span>
+        <span style="font-family: 'Space Mono', monospace; font-size: 13px; color: var(--accent, #c0451f);">/</span>
+        <span style="font-family: 'Space Mono', monospace; font-size: 13px; color: #6f7177;">M.E.</span>
+      </a>
+      <nav style="display: flex; align-items: center; gap: 30px;">
+        <a href="#about" style="text-decoration: none; color: #54565c; font-size: 14px; font-weight: 500;" style-hover="color: #1b1d22;">About</a>
+        <a href="#experience" style="text-decoration: none; color: #54565c; font-size: 14px; font-weight: 500;" style-hover="color: #1b1d22;">Experience</a>
+        <a href="#projects" style="text-decoration: none; color: #54565c; font-size: 14px; font-weight: 500;" style-hover="color: #1b1d22;">Projects</a>
+        <a href="#skills" style="text-decoration: none; color: #54565c; font-size: 14px; font-weight: 500;" style-hover="color: #1b1d22;">Skills</a>
+        <a href="#contact" style="text-decoration: none; padding: 8px 16px; border: 1px solid #1b1d22; color: #1b1d22; font-size: 14px; font-weight: 600;" style-hover="background: #1b1d22; color: #f4f2ec;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="top">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 72px 44px 64px; display: grid; grid-template-columns: 1.5fr 1fr; gap: 56px; align-items: end;">
+      <div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--accent, #c0451f); margin-bottom: 22px; text-transform: uppercase;">Mechanical Engineer / Newport Beach, CA</div>
+        <h1 style="font-family: 'Newsreader', Georgia, serif; font-size: 60px; line-height: 1.0; font-weight: 500; letter-spacing: -0.015em; margin: 0 0 22px; color: #14151a;">Anthony<br><span style="font-style: italic;">Di Ferdinando</span></h1>
+        <p style="font-size: 17px; line-height: 1.6; color: #45474d; max-width: 540px; margin: 0 0 30px;">I develop, integrate, and test complex electromechanical hardware from concept through production. My work spans avionics displays, hydraulic systems, and military-grade electronics built for demanding operational environments.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="#projects" style="text-decoration: none; padding: 12px 22px; background: var(--accent, #c0451f); color: #fff; font-size: 14px; font-weight: 600;" style-hover="opacity: 0.9;">View Projects</a>
+          <a href="#contact" style="text-decoration: none; padding: 12px 22px; border: 1px solid rgba(20,22,26,0.28); color: #1b1d22; font-size: 14px; font-weight: 600;" style-hover="border-color: #1b1d22;">Get in Touch</a>
+        </div>
+      </div>
+
+      <!-- Headshot placeholder -->
+      <div style="aspect-ratio: 4/5; border: 1px solid rgba(20,22,26,0.2); background: #ebe8df; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center; padding: 24px; position: relative;">
+        <div style="position: absolute; top: 10px; left: 12px; font-family: 'Space Mono', monospace; font-size: 10px; color: #9a9c9f; letter-spacing: 0.06em;">FIG. 01</div>
+        <div style="width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(20,22,26,0.28); display: flex; align-items: center; justify-content: center;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7a7c80" stroke-width="1.5"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"></path></svg>
+        </div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #6f7177;">Headshot</div>
+        <div style="font-size: 12px; color: #8a8c91; max-width: 180px;">Professional photo to be added</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" style="border-top: 1px solid rgba(20,22,26,0.14); background: #fff;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 64px 44px; display: grid; grid-template-columns: 0.7fr 1.8fr; gap: 48px;">
+      <div style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #8a8c91;">01 / ABOUT</div>
+      <div>
+        <p style="font-family: 'Newsreader', Georgia, serif; font-size: 25px; line-height: 1.4; font-weight: 400; margin: 0 0 22px; color: #1b1d22; max-width: 720px;">A mechanical engineer who builds test procedures, troubleshoots hardware, and validates systems with his hands as much as his head.</p>
+        <p style="font-size: 16px; line-height: 1.7; color: #54565c; margin: 0 0 32px; max-width: 640px;">I collaborate across mechanical, electrical, and manufacturing teams to deliver reliable hardware for the field. My background reaches from avionics displays to fluid-power systems and cleanroom electronics, covering everything from translating requirements into designs to validating finished hardware.</p>
+        <div style="display: flex; gap: 40px; flex-wrap: wrap; border-top: 1px solid rgba(20,22,26,0.12); padding-top: 28px;">
+          <div>
+            <div style="font-family: 'Newsreader', Georgia, serif; font-size: 32px; font-weight: 500;">04</div>
+            <div style="font-family: 'Space Mono', monospace; font-size: 12px; color: #8a8c91; margin-top: 6px; letter-spacing: 0.04em;">ENGINEERING ROLES</div>
+          </div>
+          <div>
+            <div style="font-family: 'Newsreader', Georgia, serif; font-size: 32px; font-weight: 500;">720p <span style="color: var(--accent, #c0451f);">→</span> 1080p</div>
+            <div style="font-family: 'Space Mono', monospace; font-size: 12px; color: #8a8c91; margin-top: 6px; letter-spacing: 0.04em;">APACHE DISPLAY UPGRADE</div>
+          </div>
+          <div>
+            <div style="font-family: 'Newsreader', Georgia, serif; font-size: 32px; font-weight: 500;">20%</div>
+            <div style="font-family: 'Space Mono', monospace; font-size: 12px; color: #8a8c91; margin-top: 6px; letter-spacing: 0.04em;">SYSTEM COST REDUCTION</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" style="border-top: 1px solid rgba(20,22,26,0.14);">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 64px 44px;">
+      <div style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #8a8c91; margin-bottom: 8px;">02 / EXPERIENCE</div>
+      <div style="display: flex; flex-direction: column;">
+        <sc-for list="{{ jobs }}" as="job" hint-placeholder-count="4">
+          <div style="display: grid; grid-template-columns: 220px 1fr; gap: 36px; padding: 30px 0; border-top: 1px solid rgba(20,22,26,0.12);">
+            <div>
+              <div style="font-family: 'Space Mono', monospace; font-size: 12px; color: var(--accent, #c0451f); letter-spacing: 0.02em;">{{ job.dates }}</div>
+              <div style="font-size: 13px; color: #8a8c91; margin-top: 6px;">{{ job.location }}</div>
+            </div>
+            <div>
+              <h3 style="font-family: 'Newsreader', Georgia, serif; font-size: 23px; font-weight: 500; margin: 0 0 2px; letter-spacing: -0.01em;">{{ job.role }}</h3>
+              <div style="font-size: 14px; color: #45474d; font-weight: 600; margin-bottom: 16px;">{{ job.company }}</div>
+              <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px;">
+                <sc-for list="{{ job.bullets }}" as="b" hint-placeholder-count="3">
+                  <li style="position: relative; padding-left: 18px; font-size: 15px; line-height: 1.6; color: #54565c;">
+                    <span style="position: absolute; left: 0; top: 9px; width: 5px; height: 1px; background: var(--accent, #c0451f);"></span>
+                    {{ b }}
+                  </li>
+                </sc-for>
+              </ul>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" style="border-top: 1px solid rgba(20,22,26,0.14); background: #fff;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 64px 44px;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 36px; flex-wrap: wrap;">
+        <div style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #8a8c91;">03 / PROJECTS</div>
+        <div style="font-size: 13px; color: #8a8c91; max-width: 360px; text-align: right;">Photos, CAD renders, and results to be added as these are built out.</div>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <sc-for list="{{ projects }}" as="proj" hint-placeholder-count="2">
+          <article style="border: 1px solid rgba(20,22,26,0.16); display: flex; flex-direction: column; background: #fff;">
+            <div style="aspect-ratio: 16/10; border-bottom: 1px solid rgba(20,22,26,0.12); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: #f1efe8;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#9a9c9f" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="1"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+              <div style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #9a9c9f;">Project image</div>
+            </div>
+            <div style="padding: 24px;">
+              <div style="font-family: 'Space Mono', monospace; font-size: 11px; color: #9a9c9f; margin-bottom: 10px; letter-spacing: 0.02em;">{{ proj.org }}</div>
+              <h3 style="font-family: 'Newsreader', Georgia, serif; font-size: 21px; font-weight: 500; margin: 0 0 10px; line-height: 1.25;">{{ proj.title }}</h3>
+              <p style="font-size: 14px; line-height: 1.6; color: #54565c; margin: 0 0 16px;">{{ proj.desc }}</p>
+              <div style="display: flex; gap: 7px; flex-wrap: wrap;">
+                <sc-for list="{{ proj.tags }}" as="tag" hint-placeholder-count="3">
+                  <span style="font-family: 'Space Mono', monospace; font-size: 11px; padding: 4px 9px; border: 1px solid rgba(20,22,26,0.16); color: #54565c;">{{ tag }}</span>
+                </sc-for>
+              </div>
+            </div>
+          </article>
+        </sc-for>
+
+        <!-- Add-project ghost card -->
+        <article style="border: 1px dashed rgba(20,22,26,0.24); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 220px; text-align: center; padding: 24px; background: #faf9f4;">
+          <div style="width: 40px; height: 40px; border: 1px solid rgba(20,22,26,0.24); display: flex; align-items: center; justify-content: center; font-size: 22px; color: #6f7177; line-height: 1;">+</div>
+          <div style="font-size: 15px; font-weight: 600; color: #1b1d22;">More projects coming</div>
+          <div style="font-size: 13px; color: #8a8c91; max-width: 220px;">Space reserved for additional work. Send details and media to fill in.</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" style="border-top: 1px solid rgba(20,22,26,0.14);">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 64px 44px;">
+      <div style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #8a8c91; margin-bottom: 8px;">04 / SKILLS</div>
+      <div style="display: flex; flex-direction: column;">
+        <sc-for list="{{ skills }}" as="grp" hint-placeholder-count="4">
+          <div style="display: grid; grid-template-columns: 220px 1fr; gap: 36px; padding: 24px 0; border-top: 1px solid rgba(20,22,26,0.12); align-items: baseline;">
+            <div style="font-family: 'Space Mono', monospace; font-size: 13px; color: #1b1d22; font-weight: 700; letter-spacing: 0.01em;">{{ grp.cat }}</div>
+            <div style="font-size: 16px; line-height: 1.6; color: #45474d;">{{ grp.line }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <!-- Education -->
+      <div style="margin-top: 40px; border-top: 2px solid #1b1d22; padding-top: 28px; display: grid; grid-template-columns: 220px 1fr; gap: 36px;">
+        <div style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #8a8c91;">EDUCATION</div>
+        <div>
+          <h3 style="font-family: 'Newsreader', Georgia, serif; font-size: 22px; font-weight: 500; margin: 0 0 4px;">Arizona State University</h3>
+          <div style="font-size: 15px; color: #45474d; font-weight: 600; margin-bottom: 4px;">B.S.E., Mechanical Engineering Systems</div>
+          <div style="font-family: 'Space Mono', monospace; font-size: 12px; color: var(--accent, #c0451f); margin-bottom: 14px;">2019–2023 · Focus: Technological Entrepreneurship Management</div>
+          <p style="font-size: 15px; line-height: 1.65; color: #54565c; margin: 0;">3.4 GPA, Dean's List, and Barrett, The Honors College. Maintained a 3.25+ GPA while earning 36 honor credits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT / FOOTER ============ -->
+  <section id="contact" style="border-top: 1px solid rgba(20,22,26,0.14); background: #1b1d22; color: #f4f2ec;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 80px 44px;">
+      <div style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--accent, #c0451f); margin-bottom: 20px;">05 / CONTACT</div>
+      <h2 style="font-family: 'Newsreader', Georgia, serif; font-size: 42px; font-weight: 500; letter-spacing: -0.015em; margin: 0 0 16px; max-width: 600px;">Open to new mechanical and systems engineering roles.</h2>
+      <p style="font-size: 17px; color: rgba(244,242,236,0.66); max-width: 480px; margin: 0 0 36px; line-height: 1.6;">Reach out if you have a hardware challenge worth solving. Happy to talk through the work in detail.</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="mailto:ajdiferd@gmail.com" style="text-decoration: none; padding: 12px 22px; background: var(--accent, #c0451f); color: #fff; font-size: 14px; font-weight: 600;" style-hover="opacity: 0.9;">ajdiferd@gmail.com</a>
+        <a href="tel:19492146728" style="text-decoration: none; padding: 12px 22px; border: 1px solid rgba(244,242,236,0.3); color: #f4f2ec; font-size: 14px; font-weight: 600;" style-hover="border-color: #f4f2ec;">(949) 214-6728</a>
+        <a href="https://linkedin.com/in/anthony-diferdinando" target="_blank" style="text-decoration: none; padding: 12px 22px; border: 1px solid rgba(244,242,236,0.3); color: #f4f2ec; font-size: 14px; font-weight: 600;" style-hover="border-color: #f4f2ec;">LinkedIn</a>
+      </div>
+      <div style="margin-top: 72px; padding-top: 24px; border-top: 1px solid rgba(244,242,236,0.16); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+        <div style="font-family: 'Space Mono', monospace; font-size: 12px; color: rgba(244,242,236,0.5); letter-spacing: 0.04em;">ANTHONY DI FERDINANDO / 2026</div>
+        <div style="font-size: 13px; color: rgba(244,242,236,0.4);">Newport Beach, CA</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:860},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#c0451f&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      accent: this.props.accent ?? '#c0451f',
+      jobs: [
+        {
+          role: 'Mechanical Engineer',
+          company: 'Symbolic Displays Inc.',
+          location: 'Santa Ana, CA',
+          dates: 'MAY 2025 – PRESENT',
+          bullets: [
+            'Design avionics displays for aircraft and simulation systems while supporting machinists and technicians through production.',
+            'Redesigned the Apache Enhanced Up Front Display hardware to improve resolution from 720p to 1080p, upgrade video processing, and reduce system cost by 20%.',
+            'Built an in-house 3-axis vibration test procedure and fixture for Apache MPD displays, enabling internal qualification testing and cutting external lead time and cost.',
+            'Work with electrical engineers on wire harness design, PCB and IC component specification, and mechanical packaging of electrical hardware.',
+          ],
+        },
+        {
+          role: 'Engineer',
+          company: 'FAST Semiconductor',
+          location: 'Anaheim, CA',
+          dates: 'INTERN 2021 · ENG 2024–25',
+          bullets: [
+            'Manufactured and tested military-grade electronic hardware in a controlled cleanroom, including eutectic soldering, wire bonding, board integration, and quality inspection.',
+            'Performed visual and X-ray inspection to verify hardware quality and product conformance.',
+            'Reprogrammed silicon wafer saw parameters to increase chip yield from 9 to 24 chips per wafer.',
+          ],
+        },
+        {
+          role: 'Systems Engineer',
+          company: 'Motion Flow Control Products',
+          location: 'Santa Ana, CA',
+          dates: 'JUL 2023 – APR 2024',
+          bullets: [
+            'Redesigned a 90 gpm winch system to improve manufacturability, reduce cost, and increase annual production by 30%.',
+            'Developed an 80 gpm system for a plywood press with 4 independent cylinder systems that unload, press, and lift plywood sheets.',
+            'Inspected, documented, and troubleshot the Water World attraction at Universal Studios alongside a senior engineer.',
+          ],
+        },
+        {
+          role: 'Engineering Intern',
+          company: 'General Dynamics NASSCO',
+          location: 'San Diego, CA',
+          dates: 'MAY 2022 – AUG 2022',
+          bullets: [
+            'Centralized enterprise-wide engineering reporting into Tableau dashboards, replacing 10 pages of weekly reports and saving 8 to 10 hours of work each week.',
+            'Shadowed senior engineers during the installation of a reduction gear.',
+          ],
+        },
+      ],
+      projects: [
+        {
+          org: 'ASU · MESA, AZ',
+          title: 'Speed-Matching Treadmill System',
+          desc: 'A smart treadmill that detects the runner\u2019s position and adjusts belt speed to match their pace, keeping them centered for a seamless outdoor-running feel.',
+          tags: ['LiDAR', 'MATLAB Simulink', '25,000 RPM motor', 'Custom drivetrain'],
+        },
+        {
+          org: 'ASU · MESA, AZ',
+          title: 'FEA for Car Attachments',
+          desc: 'Structural analysis of car-attachment components, modeling stress, deformation, displacement, Von Mises, and reaction forces, with material selection refined in CAD.',
+          tags: ['FEA', 'SOLIDWORKS', 'AutoCAD Inventor', 'Structural'],
+        },
+      ],
+      skills: [
+        { cat: 'CAD / DIGITAL DESIGN', line: 'SOLIDWORKS, Autodesk Inventor, Fusion 360, AutoCAD, Navisworks, Quartus Prime' },
+        { cat: 'MODELING & SIMULATION', line: 'MATLAB & Simulink, finite-element analysis, Python (basic), fatigue analysis' },
+        { cat: 'MECHANICAL DESIGN', line: 'Hydraulic & pneumatic systems, systems engineering, GD&T, design for manufacture (DFM)' },
+        { cat: 'PROTOTYPING & TEST', line: '3D printing (Cura, Bambu), Arduino control, soldering & fabrication, tooling design' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
