@@ -3,23 +3,6 @@ import { TitleBlock } from "@/components/ui/TitleBlock";
 import { buttonClasses } from "@/components/ui/Button";
 import { profile, results } from "@/data/resume";
 
-/** Horizontal CAD-style dimension line with a centered callout. */
-function Dimension({ label }: { label: string }) {
-  const line =
-    "h-px flex-1 origin-left bg-graphite-300 motion-safe:[animation:draw-x_0.7s_0.25s_ease_both]";
-  return (
-    <div className="mt-5 flex max-w-[540px] items-center gap-3" aria-hidden="true">
-      <span className="h-2.5 w-px bg-graphite-400" />
-      <span className={line} />
-      <span className="shrink-0 font-mono text-[11px] tracking-wider text-graphite-400">
-        {label}
-      </span>
-      <span className={line} />
-      <span className="h-2.5 w-px bg-graphite-400" />
-    </div>
-  );
-}
-
 export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
@@ -46,9 +29,7 @@ export function Hero() {
             DiFerdinando
           </h1>
 
-          <Dimension label={profile.geo} />
-
-          <p className="mt-7 max-w-[540px] text-[17px] leading-relaxed text-graphite-600">
+          <p className="mt-8 max-w-[540px] text-[17px] leading-relaxed text-graphite-600">
             {profile.summary}
           </p>
 
@@ -76,7 +57,7 @@ export function Hero() {
         </div>
 
         {/* Right — headshot slot + title block */}
-        <div className="flex min-w-0 flex-col gap-4 motion-safe:[animation:fade-up_0.6s_0.1s_ease_both]">
+        <div className="mx-auto flex w-[85%] min-w-0 flex-col gap-4 motion-safe:[animation:fade-up_0.6s_0.1s_ease_both]">
           <div className="relative aspect-[4/5] overflow-hidden border border-graphite-300 bg-paper-raised">
             <img
               src="/anthony.jpeg"
