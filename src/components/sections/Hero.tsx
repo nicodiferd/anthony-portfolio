@@ -1,7 +1,7 @@
-import { Container, Stat } from "@/components/ui/primitives";
+import { Container, Highlight } from "@/components/ui/primitives";
 import { TitleBlock } from "@/components/ui/TitleBlock";
 import { buttonClasses } from "@/components/ui/Button";
-import { profile, results } from "@/data/resume";
+import { profile, highlights } from "@/data/resume";
 
 export function Hero() {
   return (
@@ -80,11 +80,11 @@ export function Hero() {
         </div>
       </Container>
 
-      {/* Key results strip */}
+      {/* Career-highlights strip */}
       <Container className="relative">
         <div className="grid grid-cols-2 gap-x-8 gap-y-8 border-y border-graphite-200 py-8 sm:grid-cols-4">
-          {results.map((r) => (
-            <Stat key={r.label} value={r.value} label={r.label} note={r.note} />
+          {highlights.map((h) => (
+            <Highlight key={h.label} img={h.img} alt={h.alt} label={h.label} scale={h.scale} />
           ))}
         </div>
       </Container>

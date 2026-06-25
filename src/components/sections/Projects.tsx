@@ -8,25 +8,40 @@ export function Projects() {
         <div className="mb-9 flex flex-wrap items-baseline justify-between gap-4">
           <SectionMarker index="03" label="Projects" />
           <p className="max-w-[360px] text-right text-[13px] text-graphite-400">
-            Photos, CAD renders, and results to be added as these are built out.
+            CAD, FEA, and build renders from selected academic and design work.
           </p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          {projects.map((proj) => (
+          {projects.map((proj, i) => (
             <article
               key={proj.title}
               className="flex flex-col border border-graphite-200 bg-paper"
             >
-              <div className="flex aspect-[16/10] flex-col items-center justify-center gap-2 border-b border-graphite-200 bg-graphite-50 text-graphite-400">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
-                  <rect x="3" y="3" width="18" height="18" rx="1" />
-                  <circle cx="8.5" cy="8.5" r="1.5" />
-                  <path d="M21 15l-5-5L5 21" />
-                </svg>
-                <span className="font-mono text-[10px] uppercase tracking-[0.08em]">
-                  Project image
-                </span>
+              <div className="relative flex aspect-[16/10] items-center justify-center border-b border-graphite-200 bg-graphite-50 text-graphite-400">
+                {proj.image ? (
+                  <>
+                    <img
+                      src={proj.image}
+                      alt={proj.title}
+                      className="h-full w-full object-contain p-3"
+                    />
+                    <span className="absolute left-2.5 top-2.5 bg-ink/55 px-1.5 py-0.5 font-mono text-[10px] tracking-[0.06em] text-paper">
+                      FIG. {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </>
+                ) : (
+                  <div className="flex flex-col items-center justify-center gap-2">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
+                      <rect x="3" y="3" width="18" height="18" rx="1" />
+                      <circle cx="8.5" cy="8.5" r="1.5" />
+                      <path d="M21 15l-5-5L5 21" />
+                    </svg>
+                    <span className="font-mono text-[10px] uppercase tracking-[0.08em]">
+                      Project image
+                    </span>
+                  </div>
+                )}
               </div>
               <div className="p-6">
                 <div className="font-mono text-[11px] tracking-wide text-graphite-400">
@@ -52,9 +67,9 @@ export function Projects() {
             <span className="flex h-10 w-10 items-center justify-center border border-graphite-300 text-xl leading-none text-graphite-500">
               +
             </span>
-            <span className="text-[15px] font-semibold text-ink">More projects coming</span>
+            <span className="text-[15px] font-semibold text-ink">More projects coming soon!</span>
             <span className="max-w-[220px] text-[13px] text-graphite-400">
-              Space reserved for additional work. Send details and media to fill in.
+              Space reserved for additional work
             </span>
           </article>
         </div>

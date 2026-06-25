@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
 /** Page-width wrapper — matches the drawing sheet's margins. */
@@ -46,6 +46,50 @@ export function Tag({ children }: { children: ReactNode }) {
     <span className="inline-flex items-center border border-graphite-200 bg-paper-raised px-2.5 py-1 font-mono text-[11px] tracking-wide text-graphite-600">
       {children}
     </span>
+  );
+}
+
+/**
+ * A career-highlight clip art over a mono caption. Falls back to a dashed
+ * placeholder when the image is missing (e.g. crane.png before it's dropped in).
+ */
+export function Highlight({
+  img,
+  alt,
+  label,
+  scale = 1,
+}: {
+  img: string;
+  alt: string;
+  label: string;
+  scale?: number;
+}) {
+  const [errored, setErrored] = useState(false);
+  return (
+    <div className="flex flex-col items-center gap-3 text-center">
+      <div className="flex h-20 w-full items-center justify-center overflow-hidden border border-graphite-200 bg-white p-3 sm:h-24">
+        {errored ? (
+          <div className="flex h-full w-full items-center justify-center border border-dashed border-graphite-300 text-graphite-300">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
+              <rect x="3" y="3" width="18" height="18" rx="1" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <path d="M21 15l-5-5L5 21" />
+            </svg>
+          </div>
+        ) : (
+          <img
+            src={img}
+            alt={alt}
+            className="h-full w-full object-contain"
+            style={scale !== 1 ? { transform: `scale(${scale})` } : undefined}
+            onError={() => setErrored(true)}
+          />
+        )}
+      </div>
+      <div className="font-mono text-[11px] uppercase tracking-[0.08em] text-graphite-500">
+        {label}
+      </div>
+    </div>
   );
 }
 

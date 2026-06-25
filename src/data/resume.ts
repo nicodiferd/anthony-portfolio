@@ -11,16 +11,16 @@ export const profile = {
   firstName: "Anthony",
   lastName: "DiFerdinando",
   role: "Mechanical Engineer",
-  // Newport Beach, CA — used as a datum callout in the hero.
-  location: "Newport Beach, CA",
-  geo: "33.6189° N, 117.9298° W",
+  // Orange County, CA — used as a datum callout in the hero.
+  location: "Orange County, CA",
+  geo: "33.7175° N, 117.8311° W",
   email: "ajdiferd@gmail.com",
   phone: "(949) 214-6728",
   phoneHref: "+19492146728",
   linkedin: "linkedin.com/in/anthony-diferdinando",
   linkedinHref: "https://www.linkedin.com/in/anthony-diferdinando",
   status: "Open to roles",
-  rev: "2026.06",
+  rev: "2026.06.24",
   disciplines: ["Mechanical Analysis", "Full-Cycle Project Management", "Systems Engineering"],
   // Lead paragraph (recruiter-facing, condensed from the resume summary).
   summary:
@@ -28,12 +28,18 @@ export const profile = {
   focus: ["Avionics displays", "Hydraulic systems", "Military-grade electronics"],
 } as const
 
-/** The strongest quantified wins — these lead the page. */
-export const results = [
-  { value: "1080p", label: "Apache display resolution", note: "upgraded from 720p" },
-  { value: "−20%", label: "Avionics system cost", note: "Apache UFD redesign" },
-  { value: "+30%", label: "Annual production", note: "90 gpm winch redesign" },
-  { value: "9 → 24", label: "Chips per wafer", note: "saw-parameter retune" },
+/**
+ * Career-highlight clip art — the visual arc across the resume, shown under the
+ * hero. The strongest quantified wins (1080p, −20% cost, 9 → 24 chips, +30%
+ * production) live verbatim in the experience bullets below.
+ */
+export const highlights = [
+  // scale nudges art that ships with heavy internal whitespace (e.g. the ASU logo).
+  { img: "/asu.png", alt: "Arizona State University, class of 2023", label: "B.S. Mechanical · ASU", scale: 1.4 },
+  { img: "/micro_processor.png", alt: "Semiconductor chip", label: "Semiconductors", scale: 1 },
+  // TODO: drop crane.png into public/ — the tile shows a placeholder until then.
+  { img: "/crane.png", alt: "Hydraulic crane", label: "Hydraulics", scale: 1 },
+  { img: "/jet_white.jpeg", alt: "Fighter jet", label: "Avionics", scale: 1 },
 ] as const
 
 export type Experience = {
@@ -107,7 +113,7 @@ export type Project = {
   period: string
   blurb: string
   tags: string[]
-  // TODO: add a real image once Anthony sends CAD renders / build photos.
+  // Path under public/. Rendered object-contain; omit for a placeholder slot.
   image?: string
 }
 
@@ -119,6 +125,16 @@ export const projects: Project[] = [
     blurb:
       "A smart treadmill that senses the runner's position and matches belt speed to keep them centered. Lidar sensing feeds a MATLAB/Simulink ESC that sorts the user into five speed zones, driving a 2 hp, 25,000 rpm motor through a custom drivetrain for a seamless outdoor-run feel.",
     tags: ["Lidar", "MATLAB / Simulink", "Drivetrain", "Controls"],
+    image: "/treadmill.png",
+  },
+  {
+    title: "Design & Manufacturing of a Hydraulic Press",
+    org: "ASU · Mechanical System Design",
+    period: "2019–2023",
+    blurb:
+      "Designed and built a hydraulic lift with a 4:1 lifting ratio operating at 70% efficiency. Engineered dynamic O-ring seals and developed a portable piston head and housing, detailed to GD&T spec.",
+    tags: ["Hydraulics", "O-Ring Seal Design", "SOLIDWORKS", "Manufacturing"],
+    image: "/solid_works_design.png",
   },
   {
     title: "FEA for Car Attachments",
@@ -127,6 +143,7 @@ export const projects: Project[] = [
     blurb:
       "Structural analysis of automotive components: simulation models for stress, deformation, displacement, Von Mises, and reaction forces, documented in a formal report. Parts were engineered in SOLIDWORKS and AutoCAD Inventor to refine designs and select materials.",
     tags: ["FEA", "SOLIDWORKS", "Inventor", "Materials"],
+    image: "/yield_strength.png",
   },
 ]
 
