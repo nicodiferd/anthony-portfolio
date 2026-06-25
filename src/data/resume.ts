@@ -38,7 +38,7 @@ export const highlights = [
   { img: "/asu.png", alt: "Arizona State University, class of 2023", label: "B.S. Mechanical · ASU", scale: 1.4 },
   { img: "/micro_processor.png", alt: "Semiconductor chip", label: "Semiconductors", scale: 1 },
   // TODO: drop crane.png into public/ — the tile shows a placeholder until then.
-  { img: "/crane.png", alt: "Hydraulic crane", label: "Hydraulics", scale: 1 },
+  { img: "/crane.jpeg", alt: "Hydraulic crane", label: "Hydraulics", scale: 1 },
   { img: "/jet_white.jpeg", alt: "Fighter jet", label: "Avionics", scale: 1 },
 ] as const
 
