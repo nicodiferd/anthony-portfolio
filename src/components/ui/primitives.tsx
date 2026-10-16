@@ -1,5 +1,6 @@
 import { useState, type ReactNode } from "react";
 import { cn } from "@/lib/cn";
+import { imageSizes } from "@/data/images";
 
 /** Page-width wrapper — matches the drawing sheet's margins. */
 export function Container({
@@ -51,7 +52,7 @@ export function Tag({ children }: { children: ReactNode }) {
 
 /**
  * A career-highlight clip art over a mono caption. Falls back to a dashed
- * placeholder when the image is missing (e.g. crane.png before it's dropped in).
+ * placeholder when the image is missing.
  */
 export function Highlight({
   img,
@@ -80,6 +81,9 @@ export function Highlight({
           <img
             src={img}
             alt={alt}
+            width={imageSizes[img]?.width}
+            height={imageSizes[img]?.height}
+            decoding="async"
             className="h-full w-full object-contain"
             style={scale !== 1 ? { transform: `scale(${scale})` } : undefined}
             onError={() => setErrored(true)}

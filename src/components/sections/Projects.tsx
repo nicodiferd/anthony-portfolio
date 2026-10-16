@@ -1,5 +1,6 @@
 import { Container, SectionMarker, Tag } from "@/components/ui/primitives";
 import { projects } from "@/data/resume";
+import { imageSizes } from "@/data/images";
 
 export function Projects() {
   return (
@@ -24,6 +25,10 @@ export function Projects() {
                     <img
                       src={proj.image}
                       alt={proj.title}
+                      width={imageSizes[proj.image]?.width}
+                      height={imageSizes[proj.image]?.height}
+                      loading="lazy"
+                      decoding="async"
                       className="h-full w-full object-contain p-3"
                     />
                     <span className="absolute left-2.5 top-2.5 bg-ink/55 px-1.5 py-0.5 font-mono text-[10px] tracking-[0.06em] text-paper">

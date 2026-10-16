@@ -1,9 +1,9 @@
 /**
  * Single source of truth for site content, transcribed from Anthony's resume.
  *
- * TODO markers (search "TODO:") flag things to collect from Anthony as the
- * site grows: a headshot, hardware/CAD photos, and deeper project write-ups.
- * Update values here and every section follows.
+ * Still to collect from Anthony as the site grows: hardware/CAD photos and
+ * deeper project write-ups. Every visible word here is Anthony's copy and needs
+ * his approval. Update values here and every section follows.
  */
 
 export const profile = {
@@ -11,7 +11,7 @@ export const profile = {
   firstName: "Anthony",
   lastName: "DiFerdinando",
   role: "Mechanical Engineer",
-  // Orange County, CA — used as a datum callout in the hero.
+  // Orange County, CA: used as a datum callout in the hero.
   location: "Orange County, CA",
   geo: "33.7175° N, 117.8311° W",
   email: "ajdiferd@gmail.com",
@@ -29,17 +29,16 @@ export const profile = {
 } as const
 
 /**
- * Career-highlight clip art — the visual arc across the resume, shown under the
+ * Career-highlight clip art: the visual arc across the resume, shown under the
  * hero. The strongest quantified wins (1080p, −20% cost, 9 → 24 chips, +30%
  * production) live verbatim in the experience bullets below.
  */
 export const highlights = [
   // scale nudges art that ships with heavy internal whitespace (e.g. the ASU logo).
-  { img: "/asu.png", alt: "Arizona State University, class of 2023", label: "B.S. Mechanical · ASU", scale: 1.4 },
-  { img: "/micro_processor.png", alt: "Semiconductor chip", label: "Semiconductors", scale: 1 },
-  // TODO: drop crane.png into public/ — the tile shows a placeholder until then.
-  { img: "/crane.jpeg", alt: "Hydraulic crane", label: "Hydraulics", scale: 1 },
-  { img: "/jet_white.jpeg", alt: "Fighter jet", label: "Avionics", scale: 1 },
+  { img: "/asu.webp", alt: "Arizona State University, class of 2023", label: "B.S. Mechanical · ASU", scale: 1.4 },
+  { img: "/micro_processor.webp", alt: "Semiconductor chip", label: "Semiconductors", scale: 1 },
+  { img: "/crane.webp", alt: "Hydraulic crane", label: "Hydraulics", scale: 1 },
+  { img: "/jet_white.webp", alt: "Fighter jet", label: "Avionics", scale: 1 },
 ] as const
 
 export type Experience = {
@@ -113,7 +112,8 @@ export type Project = {
   period: string
   blurb: string
   tags: string[]
-  // Path under public/. Rendered object-contain; omit for a placeholder slot.
+  // Path under public/ (WebP from scripts/optimize-images.sh; add its size to
+  // src/data/images.ts). Rendered object-contain; omit for a placeholder slot.
   image?: string
 }
 
@@ -125,7 +125,7 @@ export const projects: Project[] = [
     blurb:
       "A smart treadmill that senses the runner's position and matches belt speed to keep them centered. Lidar sensing feeds a MATLAB/Simulink ESC that sorts the user into five speed zones, driving a 2 hp, 25,000 rpm motor through a custom drivetrain for a seamless outdoor-run feel.",
     tags: ["Lidar", "MATLAB / Simulink", "Drivetrain", "Controls"],
-    image: "/treadmill.png",
+    image: "/treadmill.webp",
   },
   {
     title: "Design & Manufacturing of a Hydraulic Press",
@@ -134,7 +134,7 @@ export const projects: Project[] = [
     blurb:
       "Designed and built a hydraulic lift with a 4:1 lifting ratio operating at 70% efficiency. Engineered dynamic O-ring seals and developed a portable piston head and housing, detailed to GD&T spec.",
     tags: ["Hydraulics", "O-Ring Seal Design", "SOLIDWORKS", "Manufacturing"],
-    image: "/solid_works_design.png",
+    image: "/solid_works_design.webp",
   },
   {
     title: "FEA for Car Attachments",
@@ -143,7 +143,7 @@ export const projects: Project[] = [
     blurb:
       "Structural analysis of automotive components: simulation models for stress, deformation, displacement, Von Mises, and reaction forces, documented in a formal report. Parts were engineered in SOLIDWORKS and AutoCAD Inventor to refine designs and select materials.",
     tags: ["FEA", "SOLIDWORKS", "Inventor", "Materials"],
-    image: "/yield_strength.png",
+    image: "/yield_strength.webp",
   },
 ]
 
@@ -183,7 +183,7 @@ export const education = [
   },
 ] as const
 
-/** Section order — also used to number "sheets" in the title block. */
+/** Section order, also used to number "sheets" in the title block. */
 export const sections = [
   { id: "profile", label: "Profile" },
   { id: "work", label: "Work" },

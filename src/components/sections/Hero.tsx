@@ -60,7 +60,12 @@ export function Hero() {
         <div className="mx-auto flex w-[85%] min-w-0 flex-col gap-4 motion-safe:[animation:fade-up_0.6s_0.1s_ease_both]">
           <div className="relative aspect-[4/5] overflow-hidden border border-graphite-300 bg-paper-raised">
             <img
-              src="/anthony.jpeg"
+              src="/anthony.webp"
+              srcSet="/anthony-640.webp 640w, /anthony.webp 1134w"
+              sizes="(min-width: 1024px) 352px, 85vw"
+              width={1134}
+              height={1512}
+              fetchPriority="high"
               alt="Anthony DiFerdinando"
               className="h-full w-full object-cover"
             />
