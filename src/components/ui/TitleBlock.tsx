@@ -1,7 +1,7 @@
 import { cn } from "@/lib/cn";
 
 /**
- * TitleBlock — the boxed metadata in the corner of an engineering drawing
+ * TitleBlock: the boxed metadata in the corner of an engineering drawing
  * (DRAWN / DISC / REV / SHEET). The page's signature framing device.
  */
 export type TitleBlockRow = { label: string; value: string };

@@ -1,0 +1,12 @@
+# Cloudflare Pages response headers (https://developers.cloudflare.com/pages/configuration/headers/).
+
+# Vite fingerprints everything under /assets/, so a file there never changes.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Keep the pages.dev preview hosts out of search; the canonical host is
+# anthony.diferdinando.com (see the canonical link in index.html).
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex

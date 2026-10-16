@@ -6,16 +6,16 @@ import { profile, highlights } from "@/data/resume";
 export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 blueprint-grid opacity-60" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 blueprint-grid opacity-60" />
       <Container className="relative grid items-end gap-12 pt-14 pb-12 lg:grid-cols-[1.5fr_1fr] lg:gap-14">
-        {/* Left — identity */}
+        {/* Left: identity */}
         <div className="min-w-0 motion-safe:[animation:fade-up_0.6s_ease_both]">
           <div className="mb-5 flex flex-wrap items-center gap-x-4 gap-y-2">
             <span className="font-mono text-[12px] uppercase tracking-[0.14em] text-blueprint-500">
               Mechanical Engineer / Systems
             </span>
             <span className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.1em] text-graphite-500">
-              <span className="relative flex h-1.5 w-1.5">
+              <span aria-hidden="true" className="relative flex h-1.5 w-1.5">
                 <span className="absolute inline-flex h-full w-full rounded-full bg-signal opacity-70 motion-safe:animate-ping" />
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-signal" />
               </span>
@@ -56,11 +56,16 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Right — headshot slot + title block */}
+        {/* Right: headshot slot + title block */}
         <div className="mx-auto flex w-[85%] min-w-0 flex-col gap-4 motion-safe:[animation:fade-up_0.6s_0.1s_ease_both]">
           <div className="relative aspect-[4/5] overflow-hidden border border-graphite-300 bg-paper-raised">
             <img
-              src="/anthony.jpeg"
+              src="/anthony.webp"
+              srcSet="/anthony-640.webp 640w, /anthony.webp 1134w"
+              sizes="(min-width: 1024px) 352px, 85vw"
+              width={1134}
+              height={1512}
+              fetchPriority="high"
               alt="Anthony DiFerdinando"
               className="h-full w-full object-cover"
             />
