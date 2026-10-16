@@ -14,7 +14,7 @@ export function SiteHeader() {
         >
           Anthony
         </a>
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav aria-label="Sections" className="hidden items-center gap-7 md:flex">
           {navLinks.map((s) => (
             <a
               key={s.id}

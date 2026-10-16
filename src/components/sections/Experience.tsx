@@ -38,7 +38,7 @@ export function Experience() {
                       key={b}
                       className="relative max-w-[680px] pl-5 text-[15px] leading-relaxed text-graphite-600"
                     >
-                      <span className="absolute left-0 top-[0.7em] h-px w-2.5 bg-blueprint-500" />
+                      <span aria-hidden="true" className="absolute left-0 top-[0.7em] h-px w-2.5 bg-blueprint-500" />
                       {b}
                     </li>
                   ))}

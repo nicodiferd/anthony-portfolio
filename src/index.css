@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------ *
- * Design tokens — single source of truth for Anthony's portfolio.
+ * Design tokens: single source of truth for Anthony's portfolio.
  *
  * Direction: a controlled engineering drawing / instrument datasheet.
  * Cool paper + graphite, blueprint-blue as the structural accent, and a
@@ -26,7 +26,7 @@
   --color-paper-raised: #f8f8f5;
   --color-ink: #15171b;
 
-  /* Graphite — cool neutral scale */
+  /* Graphite: cool neutral scale */
   --color-graphite-50: #f4f5f5;
   --color-graphite-100: #e8e9ea;
   --color-graphite-200: #d5d7da;
@@ -38,7 +38,7 @@
   --color-graphite-800: #20232a;
   --color-graphite-900: #15171b;
 
-  /* Blueprint — structural accent (links, primary actions, dimension lines) */
+  /* Blueprint: structural accent (links, primary actions, dimension lines) */
   --color-blueprint-50: #edf2ff;
   --color-blueprint-100: #d8e3ff;
   --color-blueprint-200: #b2c6ff;
@@ -48,17 +48,17 @@
   --color-blueprint-600: #1d3da6;
   --color-blueprint-700: #193283;
 
-  /* Caution amber — used ONLY for availability status */
+  /* Caution amber: used ONLY for availability status */
   --color-signal: #d98620;
   --color-signal-soft: #f3e2c6;
 
-  /* Radii — drawings are sharp; keep corners tight */
+  /* Radii: drawings are sharp; keep corners tight */
   --radius-xs: 1px;
   --radius-sm: 3px;
   --radius-md: 6px;
   --radius-lg: 10px;
 
-  /* Elevation — instrument-panel restraint */
+  /* Elevation: instrument-panel restraint */
   --shadow-card: 0 1px 1px rgb(21 23 27 / 0.05),
     0 10px 30px -18px rgb(21 23 27 / 0.30);
 
@@ -67,7 +67,7 @@
   --text-7xl--line-height: 0.92;
 }
 
-/* Faint engineering-paper grid — used sparingly behind the hero. */
+/* Faint engineering-paper grid, used sparingly behind the hero. */
 @utility blueprint-grid {
   background-image:
     linear-gradient(to right, rgb(41 80 207 / 0.05) 1px, transparent 1px),
@@ -97,6 +97,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+/* Keyboard focus: a visible ring on every link and control. In the base layer
+ * so components that draw their own ring (buttonClasses, Contact links) win. */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-blueprint-500);
+    outline-offset: 2px;
+  }
+  /* Section anchors land below the sticky 56px header, not under it. */
+  section[id] {
+    scroll-margin-top: 3.5rem;
+  }
 }
 
 /* Quality floor: respect reduced motion. */

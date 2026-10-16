@@ -37,7 +37,7 @@ export function Projects() {
                   </>
                 ) : (
                   <div className="flex flex-col items-center justify-center gap-2">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
+                    <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
                       <rect x="3" y="3" width="18" height="18" rx="1" />
                       <circle cx="8.5" cy="8.5" r="1.5" />
                       <path d="M21 15l-5-5L5 21" />
@@ -69,7 +69,7 @@ export function Projects() {
 
           {/* Reserved slot for future work */}
           <article className="flex min-h-[220px] flex-col items-center justify-center gap-2.5 border border-dashed border-graphite-300 bg-paper p-6 text-center">
-            <span className="flex h-10 w-10 items-center justify-center border border-graphite-300 text-xl leading-none text-graphite-500">
+            <span aria-hidden="true" className="flex h-10 w-10 items-center justify-center border border-graphite-300 text-xl leading-none text-graphite-500">
               +
             </span>
             <span className="text-[15px] font-semibold text-ink">More projects coming soon!</span>

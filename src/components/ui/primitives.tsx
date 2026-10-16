@@ -2,7 +2,7 @@ import { useState, type ReactNode } from "react";
 import { cn } from "@/lib/cn";
 import { imageSizes } from "@/data/images";
 
-/** Page-width wrapper — matches the drawing sheet's margins. */
+/** Page-width wrapper: matches the drawing sheet's margins. */
 export function Container({
   children,
   className,
@@ -71,7 +71,7 @@ export function Highlight({
       <div className="flex h-20 w-full items-center justify-center overflow-hidden border border-graphite-200 bg-white p-3 sm:h-24">
         {errored ? (
           <div className="flex h-full w-full items-center justify-center border border-dashed border-graphite-300 text-graphite-300">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
+            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
               <rect x="3" y="3" width="18" height="18" rx="1" />
               <circle cx="8.5" cy="8.5" r="1.5" />
               <path d="M21 15l-5-5L5 21" />
@@ -97,7 +97,7 @@ export function Highlight({
   );
 }
 
-/** A quantified result — value over a mono caption. The portfolio's proof. */
+/** A quantified result: value over a mono caption. The portfolio's proof. */
 export function Stat({
   value,
   label,
